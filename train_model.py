@@ -69,7 +69,7 @@ X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_sta
 rf = RandomForestClassifier(
     random_state=42,
     class_weight='balanced',
-    n_jobs=-1
+    n_jobs=1
 )
 
 pipeline = Pipeline(steps=[
@@ -90,7 +90,7 @@ grid_search = GridSearchCV(
     param_grid=param_grid,
     cv=3,
     scoring='accuracy',
-    n_jobs=-1,
+    n_jobs=1,
     verbose=1
 )
 
