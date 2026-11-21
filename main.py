@@ -18,8 +18,8 @@ app = FastAPI(
     version="1.0"
 )
 
-# Load the saved model pipeline
-model = joblib.load("churn_model.pkl")
+
+model = joblib.load("crop_model.pkl")
 
 
 class CustomerInput(BaseModel):
